@@ -2,7 +2,6 @@
   <section class="hero">
     <div class="hero-left">
       <div class="brand">ORA®</div>
-
       <div class="copy">
         <h1>Tausende haben im Jahr 2025 mit dem Rauchen aufgehört. Finde heraus wie.</h1>
         <p class="lead">Mit ORA hast du eine wissenschaftlich fundierte Lösung:</p>
@@ -12,20 +11,18 @@
           <li>Die einzige Methode, die wissenschaftlich untermauert ist</li>
           <li>Tu es für deine Gesundheit</li>
         </ul>
-
         <div class="ctas">
-          <!-- If you want to jump to a specific screen, add data-hf-screen="042b1a76" -->
-          <button type="button" class="cta cta--male"   data-hf-go="next">Männ</button>
-          <button type="button" class="cta cta--female" data-hf-go="next">Frau</button>
+          <a class="cta cta--male" href="https://keen-thrush-tread.heyflow.site/bioma#screen-042b1a76" target="_top">Männ</a>
+          <a class="cta cta--female" href="https://keen-thrush-tread.heyflow.site/bioma#screen-042b1a76" target="_top">Frau</a>
         </div>
       </div>
     </div>
-
     <div class="hero-right" aria-hidden="true"></div>
   </section>
 
   <section class="logos">
-    <p>Probiotische Vorteile wurden behandelt in</p> <br><br>
+    <p>Probiotische Vorteile wurden behandelt in</p>
+    <br><br>
     <div class="logo-grid">
       <img src="https://bioma.health/cdn-cgi/image/format=auto,width=256/_next/static/media/business_insider_logo.9f17bbcd.png" alt="Business Insider">
       <img src="https://bioma.health/cdn-cgi/image/format=auto,width=384/_next/static/media/healthline_logo.324f7a80.png" alt="Healthline">
@@ -45,7 +42,6 @@
       <a href="#" aria-disabled="true">Bewertungen</a>
       <a href="https://help.bioma.health/hc/en-us" target="_top" rel="noopener">Hilfe-Center</a>
     </nav>
-
     <div class="footer-note">
       <p>© 2025 ORA Health. Alle Rechte vorbehalten.</p>
       <p>Hinweis: Das Angebot ist nicht dazu bestimmt, Krankheiten zu diagnostizieren, zu behandeln, zu heilen oder zu verhindern. Das Angebot stellt keine medizinische Beratung dar. Das Angebot ist kein Ersatz für Medikamente oder andere Behandlungen, die von einem Arzt oder Gesundheitsdienstleister verschrieben werden. Nutzer sollten vor Beginn einer Behandlung einen Arzt konsultieren. Link zur Studie: https://www.dkfz.de/forschung/translationale-zentren/ncpc/stabsstelle-krebspraevention/risikofaktoren-fuer-krebs</p>
@@ -54,159 +50,239 @@
 </div>
 
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
 <style>
-:root{
-  --font:"Lexend",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  --teal:#143b34; --green:#00b67a; --salmon:#fb6f50;
-  --text:#fff; --muted:rgba(255,255,255,.85);
-  --shadow:0 20px 40px rgba(0,0,0,.25);
-}
+  :root {
+    --font: "Lexend", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    --teal: #143b34;
+    --green: #00b67a;
+    --salmon: #fb6f50;
+    --text: #fff;
+    --muted: rgba(255, 255, 255, .85);
+    --shadow: 0 20px 40px rgba(0, 0, 0, .25);
+  }
 
-/* Kill host spacing around the whole snippet */
-.hero-wrap{ margin:0 !important; padding:0 !important; }
-.hero-wrap *{ box-sizing:border-box; }
-.hero-wrap .hero,
-.hero-wrap .logos,
-.hero-wrap footer{ margin:0 !important; }
+  /* Kill host spacing around the whole snippet */
+  .hero-wrap {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 
-/* Base */
-.hero-wrap body, body{ font-family:var(--font); color:#111; background:#fff; line-height:1.35; }
+  .hero-wrap * {
+    box-sizing: border-box;
+  }
 
-/* HERO */
-.hero{
-  min-height: clamp(520px, 78svh, 760px);
-  display:grid;
-  grid-template-columns:1.05fr 1fr;
-  color:var(--text);
-  background:
-    linear-gradient(
-      to right,
-      rgba(20,59,52,0.96) 0%,
-      rgba(20,59,52,0.92) 24%,
-      rgba(20,59,52,0.70) 44%,
-      rgba(20,59,52,0.38) 60%,
-      rgba(20,59,52,0.16) 72%,
-      rgba(20,59,52,0.00) 80%
-    ),
-    url("https://assets.prd.heyflow.com/users/HNz0H1gcjsZMtuvuh7JXhCuqRqJ3/d0011a7e-347d-4583-a333-45baa5426c43/original.jpeg")
-    center right / cover no-repeat;
-  padding: clamp(18px, 4vw, 42px);
-}
-.hero-left{
-  display:grid; grid-template-rows:auto 1fr;
-  gap: clamp(12px, 2.6vw, 24px);
-}
-.hero-right{ min-height:0; }
+  .hero-wrap .hero,
+  .hero-wrap .logos,
+  .hero-wrap footer {
+    margin: 0 !important;
+  }
 
-.brand{font-weight:700; letter-spacing:.08em; opacity:.9}
-.copy{align-self:center; max-width:560px}
-.copy h1{font-size:clamp(16px,3.2vw,35px); line-height:1.15; margin:0 0 10px}
-.copy .lead{margin:0 0 8px; color:var(--muted)}
-.copy ul{list-style:none; padding:0; margin:10px 0 18px}
-.copy li{position:relative; padding-left:26px; margin:8px 0; color:#fff}
-.copy li::before{content:"✓"; position:absolute; left:0; top:0; line-height:1; color:#28e1ae; font-weight:700; transform:translateY(2px)}
+  /* Base */
+  .hero-wrap body,
+  body {
+    font-family: var(--font);
+    color: #111;
+    background: #fff;
+    line-height: 1.35;
+  }
 
-.ctas{display:flex; gap:12px; flex-wrap:wrap}
-.cta{
-  display:inline-flex; align-items:center; justify-content:center;
-  -webkit-appearance:none; appearance:none; border:0; cursor:pointer;
-  height:46px; padding:0 22px; border-radius:10px; text-decoration:none;
-  font-weight:700; color:#fff; box-shadow:var(--shadow);
-  transition:transform .12s ease, filter .2s ease
-}
-.cta:focus-visible{ outline:3px solid rgba(255,255,255,.35); outline-offset:2px; }
-.cta:hover{transform:translateY(-1px); filter:brightness(1.02)}
-.cta--male{background:var(--green)}
-.cta--female{background:var(--salmon)}
-
-@media (max-width:980px){
-  .hero{
-    grid-template-columns:1fr;
-    min-height: clamp(440px, 70svh, 680px);
-    background:
-      linear-gradient(to top,
-        rgba(20,59,52,.50) 0%,
-        rgba(20,59,52,.28) 36%,
-        rgba(20,59,52,0) 66%
+  /* HERO */
+  .hero {
+    min-height: clamp(520px, 78svh, 760px);
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    color: var(--text);
+    background: linear-gradient(
+        to right,
+        rgba(20, 59, 52, 0.96) 0%,
+        rgba(20, 59, 52, 0.92) 24%,
+        rgba(20, 59, 52, 0.70) 44%,
+        rgba(20, 59, 52, 0.38) 60%,
+        rgba(20, 59, 52, 0.16) 72%,
+        rgba(20, 59, 52, 0.00) 80%
       ),
-      url("https://bioma.health/cdn-cgi/image/format=auto,width=1080/_next/static/media/weight_loss_short_woman_mobile.65c0912b.png")
-      center / cover no-repeat;
+      url("https://assets.prd.heyflow.com/users/HNz0H1gcjsZMtuvuh7JXhCuqRqJ3/d0011a7e-347d-4583-a333-45baa5426c43/original.jpeg") center right / cover no-repeat;
+    padding: clamp(18px, 4vw, 42px);
   }
-  .copy{max-width:640px}
-}
 
-/* LOGOS */
-.logos{padding:24px 16px; text-align:center; color:#222}
-.logos p{text-transform:uppercase; font-weight:700; font-size:12px; letter-spacing:.08em; margin:4px 0 16px; opacity:.7}
-.logo-grid{max-width:1100px; margin:0 auto; display:grid; gap:24px; grid-template-columns:repeat(2,1fr); align-items:center; justify-items:center}
-.logo-grid img{height:30px; width:auto; object-fit:contain; filter:grayscale(1); opacity:.9}
-@media (min-width:640px){ .logo-grid{grid-template-columns:repeat(4,1fr)} }
+  .hero-left {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: clamp(12px, 2.6vw, 24px);
+  }
 
-/* FOOTER */
-footer{padding:24px 16px; color:#66707a; background:#fff; font-size:14px}
-.footer-links{display:flex; flex-wrap:wrap; gap:12px 16px; justify-content:center; margin-bottom:8px}
-.footer-links a{color:inherit; text-decoration:none}
-.footer-links a:hover{text-decoration:underline}
-.footer-note{max-width:960px; margin:0 auto; text-align:center; font-size:12px; line-height:1.5}
+  .hero-right {
+    min-height: 0;
+  }
+
+  .brand {
+    font-weight: 700;
+    letter-spacing: .08em;
+    opacity: .9;
+  }
+
+  .copy {
+    align-self: center;
+    max-width: 560px;
+  }
+
+  .copy h1 {
+    font-size: clamp(16px, 3.2vw, 38px);
+    line-height: 1.15;
+    margin: 0 0 10px;
+  }
+
+  .copy .lead {
+    margin: 0 0 8px;
+    color: var(--muted);
+  }
+
+  .copy ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 18px;
+  }
+
+  .copy li {
+    position: relative;
+    padding-left: 26px;
+    margin: 8px 0;
+    color: #fff;
+  }
+
+  .copy li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1;
+    color: #28e1ae;
+    font-weight: 700;
+    transform: translateY(2px);
+  }
+
+  .ctas {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    padding: 0 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: var(--shadow);
+    transition: transform .12s ease, filter .2s ease;
+  }
+
+  .cta:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.02);
+  }
+
+  .cta--male {
+    background: var(--green);
+  }
+
+  .cta--female {
+    background: var(--salmon);
+  }
+
+  @media (max-width: 980px) {
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: clamp(440px, 70svh, 680px);
+      background: linear-gradient(
+          to top,
+          rgba(20, 59, 52, .50) 0%,
+          rgba(20, 59, 52, .28) 36%,
+          rgba(20, 59, 52, 0) 66%
+        ),
+        url("https://bioma.health/cdn-cgi/image/format=auto,width=1080/_next/static/media/weight_loss_short_woman_mobile.65c0912b.png") center / cover no-repeat;
+    }
+
+    .copy {
+      max-width: 640px;
+    }
+  }
+
+  /* LOGOS */
+  .logos {
+    padding: 24px 16px;
+    text-align: center;
+    color: #222;
+  }
+
+  .logos p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .08em;
+    margin: 4px 0 16px;
+    opacity: .7;
+  }
+
+  .logo-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .logo-grid img {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: .9;
+  }
+
+  @media (min-width: 640px) {
+    .logo-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 24px 16px;
+    color: #66707a;
+    background: #fff;
+    font-size: 14px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .footer-links a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-note {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+  }
 </style>
-
-<script>
-(function(){
-  // Cache the Heyflow API if/when it fires events
-  var hfApi = null;
-  function cacheApi(e){
-    try{
-      var a = e && e.detail && e.detail.flowAPI && e.detail.flowAPI.v1;
-      if (a) hfApi = a;
-    }catch(_e){}
-  }
-  window.addEventListener('heyflow-init', cacheApi);
-  window.addEventListener('heyflow-screen-view', cacheApi);
-
-  function getApi(){
-    if (hfApi) return hfApi;
-    try{
-      if (window.heyflow?.api?.v1) return window.heyflow.api.v1;
-      if (window.__HEYFLOW__?.flowAPI?.v1) return window.__HEYFLOW__.flowAPI.v1;
-      if (window.__hfFlow?.v1) return window.__hfFlow.v1;
-    }catch(_e){}
-    return null;
-  }
-
-  function goNext(){               // advance one screen
-    var api = getApi();
-    if (api?.navigation?.goNext){ api.navigation.goNext(); return true; }
-    return false;
-  }
-
-  function goToScreen(id){         // jump to a specific screen
-    var api = getApi();
-    if (id && api?.navigation?.goTo){ api.navigation.goTo(id); return true; }
-    return false;
-  }
-
-  function fallbackNext(){         // click a visible “Weiter/Next” in the DOM
-    try{
-      var btn = Array.from(document.querySelectorAll('button,[role="button"],a'))
-        .find(function(el){
-          if (el.offsetParent === null) return false;
-          var t=(el.innerText||el.textContent||'').trim().toLowerCase();
-          return /weiter|continue|next|fortfahren/.test(t);
-        });
-      if (btn){ btn.click(); return true; }
-    }catch(_e){}
-    return false;
-  }
-
-  // Wire our CTA buttons
-  document.querySelectorAll('.hero-wrap .cta').forEach(function(el){
-    if (el.__wired) return; el.__wired = true;
-    el.addEventListener('click', function(ev){
-      ev.preventDefault();
-      var screen = el.getAttribute('data-hf-screen'); // optional
-      if (screen){ if (!goToScreen(screen)) fallbackNext(); }
-      else       { if (!goNext())           fallbackNext(); }
-    });
-  });
-})();
-</script>
