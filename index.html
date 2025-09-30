@@ -13,10 +13,15 @@
           <li>Die einzige Methode, die wissenschaftlich untermauert ist</li>
           <li>Tu es für deine Gesundheit</li>
         </ul>
-        <div class="ctas">
-          <a class="cta cta--male" href="https://keen-thrush-tread.heyflow.site/bioma#screen-042b1a76" target="_top"><span class="label">Mann</span></a>
-          <a class="cta cta--female" href="https://keen-thrush-tread.heyflow.site/bioma#screen-042b1a76" target="_top"><span class="label">Frau</span></a>
-        </div>
+       <div class="ctas">
+  <a class="cta cta--male" href="#" data-href="https://keen-thrush-tread.heyflow.site/bioma#screen-042b1a76" target="_top" rel="noopener">
+    <span class="label">Mann</span>
+  </a>
+  <a class="cta cta--female" href="#" data-href="https://keen-thrush-tread.heyflow.site/bioma#screen-042b1a76" target="_top" rel="noopener">
+    <span class="label">Frau</span>
+  </a>
+</div>
+
       </div>
     </div>
     <div class="hero-right" aria-hidden="true"></div>
@@ -166,24 +171,61 @@
 </style>
 
 <script>
-(function(){
+(function () {
   const DELAY_MS = 600;
-  document.querySelectorAll('.cta[href]').forEach(a=>{
-    a.addEventListener('click',e=>{
-      if(a.classList.contains('is-loading')) return;
+
+  function getHF() {
+    try {
+      if (window.heyflow?.api?.v1) return window.heyflow.api.v1;
+      if (window.__HEYFLOW__?.flowAPI?.v1) return window.__HEYFLOW__.flowAPI.v1;
+      if (window.__hfFlow?.v1) return window.__hfFlow.v1;
+    } catch (_) {}
+    return null;
+  }
+
+  function goToScreenIfPossible(url) {
+    const m = /#(screen-[a-z0-9-]+)/i.exec(url);
+    if (!m) return false;
+
+    const screenId = m[1];
+    const api = getHF();
+
+    // Try several possible API names across Heyflow versions
+    try {
+      if (api?.screens?.goTo)                  { api.screens.goTo(screenId); return true; }
+      if (api?.flow?.goToScreen)               { api.flow.goToScreen(screenId); return true; }
+      if (api?.navigate?.toScreen)             { api.navigate.toScreen(screenId); return true; }
+      if (api?.screens?.navigateTo)            { api.screens.navigateTo(screenId); return true; }
+    } catch (_) {}
+
+    return false;
+  }
+
+  document.querySelectorAll('.cta[data-href]').forEach((a) => {
+    a.addEventListener('click', (e) => {
       e.preventDefault();
+      if (a.classList.contains('is-loading')) return;
+
       a.classList.add('is-loading');
-      const go=()=>{
-        const url=a.getAttribute('href');
-        const target=(a.getAttribute('target')||'').toLowerCase();
-        try{
-          if(target==='_top') window.top.location.href=url;
-          else if(target==='_parent') window.parent.location.href=url;
-          else window.location.href=url;
-        }catch(_){ window.location.href=url; }
-      };
-      setTimeout(go,DELAY_MS);
-    },{passive:false});
+
+      const url = a.getAttribute('data-href');
+      const target = (a.getAttribute('target') || '_top').toLowerCase();
+
+      setTimeout(() => {
+        // First, try in-flow navigation if it's a #screen link
+        if (goToScreenIfPossible(url)) return;
+
+        // Otherwise, open the external/regular URL
+        try {
+          window.open(url, target === '_blank' ? '_blank' : '_top', 'noopener');
+        } catch (_) {
+          // Fallback
+          if (target === '_blank') window.open(url);
+          else window.location.href = url;
+        }
+      }, DELAY_MS);
+    }, { passive: false });
   });
 })();
 </script>
+
