@@ -12,8 +12,12 @@
           <li>Tu es für deine Gesundheit</li>
         </ul>
         <div class="ctas">
-          <a class="cta cta--male" href="https://keen-thrush-tread.heyflow.site/bioma#screen-042b1a76" target="_top"><span class="label">Mann</span></a>
-          <a class="cta cta--female" href="https://keen-thrush-tread.heyflow.site/bioma#screen-042b1a76" target="_top"><span class="label">Frau</span></a>
+          <a class="cta cta--male" href="https://keen-thrush-tread.heyflow.site/bioma#screen-042b1a76" target="_top">
+            <span class="label">Mann</span>
+          </a>
+          <a class="cta cta--female" href="https://keen-thrush-tread.heyflow.site/bioma#screen-042b1a76" target="_top">
+            <span class="label">Frau</span>
+          </a>
         </div>
       </div>
     </div>
@@ -43,7 +47,14 @@
     </nav>
     <div class="footer-note">
       <p>© 2025 ORA Health. Alle Rechte vorbehalten.</p>
-      <p>Hinweis: Das Angebot ist nicht dazu bestimmt, Krankheiten zu diagnostizieren, zu behandeln, zu heilen oder zu verhindern. Das Angebot stellt keine medizinische Beratung dar. Das Angebot ist kein Ersatz für Medikamente oder andere Behandlungen, die von einem Arzt oder Gesundheitsdienstleister verschrieben werden. Nutzer sollten vor Beginn einer Behandlung einen Arzt konsultieren. Link zur Studie: https://www.dkfz.de/forschung/translationale-zentren/ncpc/stabsstelle-krebspraevention/risikofaktoren-fuer-krebs</p>
+      <p>
+        Hinweis: Das Angebot ist nicht dazu bestimmt, Krankheiten zu diagnostizieren, zu behandeln,
+        zu heilen oder zu verhindern. Das Angebot stellt keine medizinische Beratung dar.
+        Das Angebot ist kein Ersatz für Medikamente oder andere Behandlungen, die von einem Arzt
+        oder Gesundheitsdienstleister verschrieben werden. Nutzer sollten vor Beginn einer Behandlung
+        einen Arzt konsultieren. Link zur Studie:
+        https://www.dkfz.de/forschung/translationale-zentren/ncpc/stabsstelle-krebspraevention/risikofaktoren-fuer-krebs
+      </p>
     </div>
   </footer>
 </div>
@@ -51,28 +62,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
 
 <style>
-  :root{
-    --font:"Lexend",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-    --teal:#143b34; --green:#00b67a; --salmon:#fb6f50;
-    --text:#fff; --muted:rgba(255,255,255,.85);
-    --shadow:0 20px 40px rgba(0,0,0,.25);
+  :root {
+    --font: "Lexend", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    --teal: #143b34;
+    --green: #00b67a;
+    --salmon: #fb6f50;
+    --text: #fff;
+    --muted: rgba(255,255,255,.85);
+    --shadow: 0 20px 40px rgba(0,0,0,.25);
   }
 
-  .hero-wrap{ margin:0 !important; padding:0 !important; }
-  .hero-wrap *{ box-sizing:border-box; }
-  .hero-wrap .hero, .hero-wrap .logos, .hero-wrap footer{ margin:0 !important; }
-  .hero-wrap br{ display:none; } /* HF sometimes injects <br> gaps */
-  .hero-wrap :where(.block, .block-content, .inner-narrow){ padding:0 !important; margin:0 !important; }
+  .hero-wrap { margin: 0 !important; padding: 0 !important; }
+  .hero-wrap * { box-sizing: border-box; }
+  .hero-wrap .hero,
+  .hero-wrap .logos,
+  .hero-wrap footer { margin: 0 !important; }
+  .hero-wrap br { display: none; }
+  .hero-wrap :where(.block, .block-content, .inner-narrow) { padding: 0 !important; margin: 0 !important; }
 
-  body, .hero-wrap body{ font-family:var(--font); color:#111; background:transparent; line-height:1.35; }
+  body, .hero-wrap body {
+    font-family: var(--font);
+    color: #111;
+    background: transparent;
+    line-height: 1.35;
+  }
 
-  /* Full-screen hero */
-  .hero{
-    min-height:100svh; /* full viewport height incl. mobile safe area */
-    display:grid; grid-template-columns:1.05fr 1fr;
-    color:var(--text);
-    background:
-      linear-gradient(
+  .hero {
+    min-height: 100svh;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    color: var(--text);
+    background: linear-gradient(
         to right,
         rgba(20,59,52,.96) 0%,
         rgba(20,59,52,.92) 24%,
@@ -86,124 +106,192 @@
     padding: clamp(18px, 4vw, 42px);
   }
 
-  .hero-left{
-    display:grid; grid-template-rows:auto 1fr;
-    gap:clamp(12px,2.6vw,24px);
+  .hero-left {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: clamp(12px,2.6vw,24px);
     padding-left: clamp(30px, 10vw, 150px);
   }
 
-  .hero-right{ min-height:0; }
-  .brand{ font-weight:700; letter-spacing:.08em; opacity:.9; }
-  .copy{ align-self:center; max-width:560px; }
+  .hero-right { min-height: 0; }
+  .brand { font-weight: 700; letter-spacing: .08em; opacity: .9; }
+  .copy { align-self: center; max-width: 560px; }
 
-  .copy h1{
-    font-weight:400;
-    font-size:clamp(28px,3.6vw,42px);
-    line-height:1.15;
-    letter-spacing:-.01em;
-    margin:0 0 14px;
+  .copy h1 {
+    font-weight: 400;
+    font-size: clamp(28px,3.6vw,42px);
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    margin: 0 0 14px;
   }
-  .copy .lead{ margin:0 0 8px; color:var(--muted); font-weight:500; letter-spacing:.005em; }
-  .copy ul{ list-style:none; padding:0; margin:12px 0 22px; }
-  .copy li{ position:relative; padding-left:26px; margin:8px 0; color:#fff; font-size:16px; }
-  .copy li::before{ content:"✓"; position:absolute; left:0; top:0; line-height:1; color:#28e1ae; font-weight:700; transform:translateY(2px); }
 
-  /* === BUTTONS (updated) === */
-.ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+  .copy .lead {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-weight: 500;
+    letter-spacing: .005em;
+  }
 
-.cta{
-  position:relative;
-  display:inline-flex; align-items:center; justify-content:center;
-  height:52px; padding:0 28px;
-  min-width: clamp(170px, 24vw, 220px);
-  border-radius:12px; text-decoration:none; font-weight:800; letter-spacing:.01em; color:#fff;
-  box-shadow:var(--shadow);
-  transition:transform .12s ease, filter .2s ease, opacity .2s ease;
-  overflow:hidden;
-}
+  .copy ul {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 22px;
+  }
 
-.cta .label{ position:relative; z-index:2; }
+  .copy li {
+    position: relative;
+    padding-left: 26px;
+    margin: 8px 0;
+    color: #fff;
+    font-size: 16px;
+  }
 
-/* Dotted roller (LEFT side, behind label) */
-.cta::after{
-  content:"";
-  position:absolute;
-  left:14px;               /* ← left-hand side */
-  top:50%;
-  width:20px; height:20px; /* roller size */
-  transform:translateY(-50%) rotate(0deg);
-  opacity:0;               /* hidden until loading */
-  z-index:1;               /* behind the text (label has z-index:2) */
+  .copy li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1;
+    color: #28e1ae;
+    font-weight: 700;
+    transform: translateY(2px);
+  }
 
-  /* Build 8 dots with box-shadows around a circle */
-  /* One base dot + 7 shadows placed around */
-  background: currentColor;
-  width:4px; height:4px; border-radius:50%;
-  box-shadow:
-    0 -8px 0 0 rgba(255,255,255,.95),
-    5.5px -5.5px 0 0 rgba(255,255,255,.75),
-    8px 0 0 0 rgba(255,255,255,.6),
-    5.5px 5.5px 0 0 rgba(255,255,255,.5),
-    0 8px 0 0 rgba(255,255,255,.45),
-    -5.5px 5.5px 0 0 rgba(255,255,255,.4),
-    -8px 0 0 0 rgba(255,255,255,.35),
-    -5.5px -5.5px 0 0 rgba(255,255,255,.3);
-  /* center the "group" by moving the base dot to middle */
-  left:14px; /* overridden by absolute left above; this keeps <20px> circle centered */
-}
+  .ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 
-/* Place the dot group container correctly (we’ll wrap it in a helper) */
-.cta::after{
-  /* we used the pseudo as the "dot group", but need it centered in a 20x20 box */
-  /* trick: use a transform-origin at center by nesting via another pseudo is not possible,
-     so we simulate: the base circle sits at left:14px; we’ll offset via translateX(-4px) */
-  transform: translate(-4px, -50%) rotate(0deg);
-}
+  .cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 0 28px;
+    min-width: clamp(170px, 24vw, 220px);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: .01em;
+    color: #fff;
+    box-shadow: var(--shadow);
+    transition: transform .12s ease, filter .2s ease, opacity .2s ease;
+    overflow: hidden;
+  }
 
-.cta:hover{ transform:translateY(-1px); filter:brightness(1.02); }
+  .cta .label { position: relative; z-index: 2; }
 
-.cta.is-loading{ pointer-events:none; opacity:.95; }
-.cta.is-loading::after{
-  opacity:1;
-  animation: ora-spin 0.9s linear infinite;
-}
+  .cta::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-4px, -50%) rotate(0deg);
+    opacity: 0;
+    z-index: 1;
+    background: currentColor;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    box-shadow:
+      0 -8px 0 0 rgba(255,255,255,.95),
+      5.5px -5.5px 0 0 rgba(255,255,255,.75),
+      8px 0 0 0 rgba(255,255,255,.6),
+      5.5px 5.5px 0 0 rgba(255,255,255,.5),
+      0 8px 0 0 rgba(255,255,255,.45),
+      -5.5px 5.5px 0 0 rgba(255,255,255,.4),
+      -8px 0 0 0 rgba(255,255,255,.35),
+      -5.5px -5.5px 0 0 rgba(255,255,255,.3);
+  }
 
-.cta--male{ background:var(--green); }
-.cta--female{ background:var(--salmon); }
+  .cta:hover { transform: translateY(-1px); filter: brightness(1.02); }
+  .cta.is-loading { pointer-events: none; opacity: .95; }
+  .cta.is-loading::after { opacity: 1; animation: ora-spin 0.9s linear infinite; }
+  .cta--male { background: var(--green); }
+  .cta--female { background: var(--salmon); }
 
-@keyframes ora-spin { to { transform: translate(-4px, -50%) rotate(360deg); } }
+  @keyframes ora-spin { to { transform: translate(-4px, -50%) rotate(360deg); } }
 
-  @keyframes spin { to { transform:translateY(-50%) rotate(360deg) } }
-
-  @media (max-width:980px){
-    .hero{
-      grid-template-columns:1fr;
-      background:
-        linear-gradient(to top, rgba(20,59,52,.50) 0%, rgba(20,59,52,.28) 36%, rgba(20,59,52,0) 66%),
+  @media (max-width:980px) {
+    .hero {
+      grid-template-columns: 1fr;
+      background: linear-gradient(to top,
+          rgba(20,59,52,.50) 0%,
+          rgba(20,59,52,.28) 36%,
+          rgba(20,59,52,0) 66%),
         url("https://bioma.health/cdn-cgi/image/format=auto,width=1080/_next/static/media/weight_loss_short_woman_mobile.65c0912b.png")
         center / cover no-repeat;
     }
-    .hero-left{ padding-left: clamp(12px, 4vw, 28px); }
-    .copy{ max-width:640px; }
-    .copy h1{ font-size:clamp(24px,5.2vw,34px); }
+    .hero-left { padding-left: clamp(12px, 4vw, 28px); }
+    .copy { max-width: 640px; }
+    .copy h1 { font-size: clamp(24px,5.2vw,34px); }
   }
 
-  .logos{ padding:24px 16px; text-align:center; color:#222; background:#fff; }
-  .logos p{ text-transform:uppercase; font-weight:700; font-size:12px; letter-spacing:.08em; margin:4px 0 16px; opacity:.7; }
-  .logo-grid{ max-width:1100px; margin:0 auto; display:grid; gap:24px; grid-template-columns:repeat(2,1fr); align-items:center; justify-items:center; }
-  .logo-grid img{ height:30px; width:auto; object-fit:contain; filter:grayscale(1); opacity:.9; }
-  @media (min-width:640px){ .logo-grid{ grid-template-columns:repeat(4,1fr); } }
+  .logos {
+    padding: 24px 16px;
+    text-align: center;
+    color: #222;
+    background: #fff;
+  }
 
-  footer{ padding:24px 16px; color:#66707a; background:#fff; font-size:14px; }
-  .footer-links{ display:flex; flex-wrap:wrap; gap:12px 16px; justify-content:center; margin-bottom:8px; }
-  .footer-links a{ color:inherit; text-decoration:none; }
-  .footer-links a:hover{ text-decoration:underline; }
-  .footer-note{ max-width:960px; margin:0 auto; text-align:center; font-size:12px; line-height:1.5; }
+  .logos p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .08em;
+    margin: 4px 0 16px;
+    opacity: .7;
+  }
+
+  .logo-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .logo-grid img {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: .9;
+  }
+
+  @media (min-width:640px) { .logo-grid { grid-template-columns: repeat(4,1fr); } }
+
+  footer {
+    padding: 24px 16px;
+    color: #66707a;
+    background: #fff;
+    font-size: 14px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .footer-links a { color: inherit; text-decoration: none; }
+  .footer-links a:hover { text-decoration: underline; }
+
+  .footer-note {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+  }
 </style>
 
 <script>
-  /* === Spinner + delayed navigation (unchanged logic, works in Heyflow) === */
-(function(){
+(function() {
   const DELAY_MS = 600;
   document.querySelectorAll('.cta[href]').forEach(a => {
     a.addEventListener('click', (e) => {
@@ -214,18 +302,17 @@
       const go = () => {
         const url = a.getAttribute('href');
         const target = (a.getAttribute('target') || '').toLowerCase();
-        try{
-          if (target === '_top')      window.top.location.href = url;
+        try {
+          if (target === '_top') window.top.location.href = url;
           else if (target === '_parent') window.parent.location.href = url;
-          else                         window.location.href = url;
-        }catch(_){
+          else window.location.href = url;
+        } catch(_) {
           window.location.href = url;
         }
       };
 
       setTimeout(go, DELAY_MS);
-    }, { passive:false });
+    }, { passive: false });
   });
 })();
-
 </script>
